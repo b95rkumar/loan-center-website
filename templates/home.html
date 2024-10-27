@@ -1,18 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title> Loan center </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Web Design Mastery | Responsive Portfolio</title>
   </head>
   <body>
-  <div>
-    <h1> Hello there, get loan here</h1>
-  </div>
-    <div>
-    <a href = "/contact">
-    <button> Contact me </button>
-         
-    </a> 
+    <!--Navbar-->
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Centre Loan</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#types">LoanTypes</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#process">How it works</a></li>
+
+
+                <li class="intial-info">Initial consultation<br>
+                    <span>Monday-Friday (8Am-10PM)<span>
+
+                      </span><br>MOBILE:+91 9266765285</li>
+                      </div>
+        </ul>
       </div>
-     
+    </nav>
+    <!--navbar ends-->
+    <!--Hero section starts-->
+    <section class="section" id="about">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">Greetings from your trustworthy Financial Advisor</p>
+          <h1 class="title">
+            We<span><br />are a</span> Loan provider, help get financial loan faster.
+          </h1>
+          <p class="description">
+            Welcome to LoanCenter!! We are a group of experienced former bank professionals , has quickly become one of the leading financial services company in India. 
+            We specialize in offering a diverse range of loan products such as business loan , loan against property, home loan, Personal loan and Over Draft. Through our partnerships with various banks and Non -Banking Financial Companies (NBFCs ) 
+            we are able to provide quick and customised financial solutions to our client
+          </p>
+          <div class="action__btns">
+
+            <button class="contact">Connect Me</button>
+          </div>
+        </div>
+        <div class="hero">
+
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="number" placeholder="Your mobile" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+      </div>
+    </section>
+    <!--Hero section ends-->
+    <!--section 2 starts-loan types-->
+    <section class="section" id="types">
+        <div class="section__container">
+          <div class="content">
+            <p class="subtitle">Get Loan Faster</p>
+            <h1 class="title">
+              With experts help<span><br />and</span> with our Loan Partners.We deal in following Loan categories
+            </h1> 
+            <div class="grid-container">
+              <div class="grid-item">Business Loan</div>
+              <div class="grid-item">Property</div>
+              <div class="grid-item">Home Loan</div>
+              <div class="grid-item">Personal Loan</div>
+              <div class="grid-item">Overdraft</div>
+              <div class="grid-item">Upcoming</div>
+
+            </div>
+            </div></section>
+             <!--section 2 starts-loan types ends-->
+             <!--section 3 starts- partners-->
+             <section class="section" id="partners">
+                <div class="section__containerbg">
+                  <div class="content">
+                    <p class="subtitle">Our Partners</p>
+                    <h1 class="title">
+                      With various<span><br />Banks & Partners</span> we help you get your loans approved faster 
+                    </h1> 
+
+              <div class="scroller" data-speed="fast">
+                <ul class="tag-list scroller__inner">
+                  <li>FINPLEX</li>
+                  <li>PIRAMAL</li>
+                  <li>EDELWEISS</li>
+                  <li>PAYSENCE</li>
+                  <li>MUTHOOT</li>
+                  <li>ADITYA BIRLA</li>
+                  <li>AMBIT FINVEST</li>
+                  <li>ASHV FIN</li>
+                  <li>CREDIT SAISON</li>
+                  <li>HERO FINCORP</li>
+                  <li>IIFL</li>
+                  <li>INDIFI</li>
+                  <li>LENDINGKART</li>
+                  <li>MAHINDRA FINANCE</li>
+                  <li>MAS FINANCE</li>
+                  <li>NEOGROWTH</li>
+                  <li>POONAWALLA</li>
+                  <li>FLEXI LOANS</li>
+                  <li>AXIS FINANCE</li>
+                  <li>GODREJ</li>
+                  <li>L& T FINANCE</li>
+                  <li>CHOLA</li>
+                  <li>TATA CAPITAL</li>
+                  <li>BAJAJ</li>
+                  <li>CLIX CAPITAL</li>
+                  <li>SBM BANK</li>
+                  <li>SMC FINANCE</li>
+                  <li>U GROW CAPITAL</li>
+                  <li>UNITY/CENTRUM</li>
+                  <li>ARKA </li> <li>SHRIRAM FINANCE LTD</li>
+
+                </ul>
+              </div>
+
+              <div class="scroller" data-direction="right" data-speed="slow">
+                <div class="scroller__inner">
+                  <img class="scroll-img" src="./static/Endless scroll image.png" alt="" />
+                  </div>
+                  <div>                          
+
+
+                  <img class="partner-img" src="./static/Partners bank.jpg" alt=""></div></div></section>
+
+
+              <script src="./static/main.js"></script>
+            </section>
+
+            <!--partners section ends-->
+            <!--how loan process works-cards-->
+            <section class="section" id="process">
+              <div class="section__container2">
+                <div class="content">
+                  <p class="subtitle">Just in few steps</p>
+                  <h1 class="title">
+                    How Loan process works?<span><br />
+                  </h1>  
+
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <h3>Step 1</h3>
+              <p class="description">Filling out the application form and provide your personal, professional, 
+                and financial details to help us understand your loan requirements and eligibility</p>
+
+
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <h3>Step 2</h3>
+              <p class="description">               
+              Submit documents for verification,includes proof of identity, address, income, and any additional documents specific to the loan type you are applying for*</p>
+
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <h3>Step 3</h3>
+              <p class="description">Approval Process.
+              Our loan officers will review your application and documents. During this stage, we may contact you for any additional information or clarification. </p>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <h3>Step 4</h3>
+              <p class="description">Loan Disbursement.
+              After signing ,the funds will be disbursed directly to your bank account, allowing you to proceed with your plans immediately.
+                 </p>
+            </div>
+          </div>
+        </div>
+        </section>
+        <!--Process section ends-->
+
+        <!--footer section starts-->
+        <section class="section">
+          <div class="section__containerf">            
+
+        <p class="description">Copyright@ 2024 CentreLoan,inc</p>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#types">LoanTypes</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#process">How it works</a></li> </ul>
+
+
+
+      </footer>
+
+    </div>
+
+  </section>  
+
+
+
+
+
   </body>
 </html>
