@@ -47,7 +47,7 @@ def submit():
 
     This is a test e-mail message."""
     try:
-        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 2525) as server:
+        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 587) as server:
             server.starttls()
             server.login("f2959531319015", "9a0af9a27333b7")
             server.sendmail(sender, receiver, safe_message)
