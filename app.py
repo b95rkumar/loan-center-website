@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, render_template_string
 from regex import escape
 import smtplib
+from email.mime.text import MIMEText
 
 app = Flask (__name__)
 
@@ -36,21 +37,29 @@ def submit():
     safe_name = escape(name)
     safe_email = email
     safe_message = escape(message)
-    
-    sender = safe_email
+    subject = "Attention - New enquirty came!!!"
+    sender = "loancenteras@gmail.com"
     receiver = "b95rkumar@gmail.com"
-
-    message = f"""\
-    Subject: Hi Mailtrap
-    To: {receiver}
-    From: {sender}
-
-    This is a test e-mail message."""
+    final_message = safe_name +" \n with email id " + safe_email+ " \n has sent message \n" + safe_message
+    msg = MIMEText(final_message)
+#    msg = safe_message
+    msg['Subject'] = subject
+#    msg['From'] = sender
+    
+#    message = f"""
+#    Subject: New enquiry from custoemr
+#    From: {safe_email}
+#    {safe_message}
+#    """
     try:
-        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 587) as server:
-            server.starttls()
-            server.login("f2959531319015", "9a0af9a27333b7")
-            server.sendmail(sender, receiver, safe_message)
+#        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 587) as server:
+#            server.starttls()
+#            server.login("f2959531319015", "9a0af9a27333b7")
+#            server.sendmail(sender, receiver, safe_message)
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp_server:
+            smtp_server.login(sender, "change here xxxx")
+            smtp_server.sendmail(sender, receiver, msg.as_string())
             print("Email sent successfully!")
     except Exception as e:
         print(f"Failed to send email: {e}")
