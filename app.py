@@ -47,9 +47,9 @@ def submit():
 
     This is a test e-mail message."""
     try:
-        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 587) as server:
-            #server.starttls()
-            server.login("f2959531319015", "")
+        with smtplib.SMTP("sandbox.smtp.mailtrap.io", 2525) as server:
+            server.starttls()
+            server.login("f2959531319015", "9a0af9a27333b7")
             server.sendmail(sender, receiver, safe_message)
             print("Email sent successfully!")
     except Exception as e:
@@ -57,6 +57,7 @@ def submit():
     # Continue processing or storing data
     return render_template_string('''
         <h1>Thank You!</h1>
+        <h2>Mail sent successfully with below information!</h2>
         <p>Your name: {{ name }}</p>
         <p>Your email: {{ email }}</p>
         <p>Your message: {{ message }}</p>
